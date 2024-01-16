@@ -33,23 +33,25 @@ function login() {
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(response => {
-            window.location.href = "./login.html";  
+            window.location.href = "./login.html";
         }).catch(error => {
             alert("Login ou senha incorreta")
         });
-        loading();
-}
-
-    
-
-function showLoading() {
-
-}
-
-function hideLoading() {
-
-}
-
-function register() {
     loading();
 }
+
+
+function recoverPassword() {
+    const email = document.getElementById("email").value;
+    loading();
+
+    firebase.auth().sendPasswordResetEmail(email).then(() => {
+        alert("Email enviado com sucesso!");
+        window.location.href = "./index.html";
+    }).catch(error => {
+        alert("Houve um problema, favor nos contactar");
+        window.location.href = "./index.html";
+    });
+}
+
+

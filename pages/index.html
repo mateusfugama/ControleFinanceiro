@@ -10,13 +10,14 @@
     <form>
         <div>
             <div><label>Email</label></div>
-            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()"/>
+            <input type="email" name="email" id="email" placeholder="Email" onchange="validateFields()"/>
         <div>
             <div><label>Senha</label></div>
             <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()"/>
         </div>
         <div>
-            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+            <button type="button" class="clear" id="recover-password-button" disabled="false" onclick="recoverPassword()">Recuperar senha</button>
+
         </div>
         <div>
             <button type="button" class="solid" id="login-button" onclick="login()">Entrar</button>
@@ -29,7 +30,6 @@
 
     <div id="loading-screen" class="loading-screen">
         <div class="loading-spinner"></div>
-        <p>Carregando...</p>
     </div>
 
     
@@ -39,23 +39,14 @@
 </div>
 
 <link rel="stylesheet" href="/style.css">
-<script src="/script.js"></script>
-<script src="/loading.js"></script>
+<script src="/scripts/script.js"></script>
+<script src="/scripts/loading.js"></script>
+<script src="/scripts/firebaseinit.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
 
-<script>
-const firebaseConfig = {
-  apiKey: "AIzaSyBkkv6YLuILG-hOdfGKm8lEu4869_cYaxg",
-  authDomain: "controledegastos-53471.firebaseapp.com",
-  projectId: "controledegastos-53471",
-  storageBucket: "controledegastos-53471.appspot.com",
-  messagingSenderId: "679575004026",
-  appId: "1:679575004026:web:2379952f4af02b66f22cc3"
-};
-firebase.initializeApp(firebaseConfig);
-</script>
+<script>firebase.initializeApp(firebaseConfig);</script>
 
 
 

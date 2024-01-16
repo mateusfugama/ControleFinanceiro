@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Criar Conta</title>
+		<link rel="stylesheet" href="/style.css" />
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js"></script>
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js"></script>		
+		<script src="/js/firebaseinit.js"></script>
+		<script src="/js/script.js"></script>
+	</head>
+
+	<body>
+		<div id="login-box">
+			<div class="left">
+				<h1>Criar Conta</h1>
+				<form id="signup-form">
+					<input type="text" name="username" placeholder="Username" />
+					<input type="text" name="email" placeholder="E-mail" />
+					<input type="password" name="password" placeholder="Senha" />
+					<input type="password" name="password2" placeholder="Repita a senha" />
+					<input type="submit" value="Criar Conta" />
+				</form>
+				<input type="button" name="go_back" value="Voltar" onclick="history.back()" />
+			</div>
+		</div>
+	</body>
 </html>
+

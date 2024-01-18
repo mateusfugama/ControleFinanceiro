@@ -54,4 +54,8 @@ function recoverPassword() {
     });
 }
 
+function registro() {
+    window.location.href = "./register.html";
+}
+
 
